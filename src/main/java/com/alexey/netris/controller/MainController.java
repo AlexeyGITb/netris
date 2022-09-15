@@ -31,7 +31,7 @@ public class MainController {
     @GetMapping("/response_entity")
     public ResponseEntity<Set<CctvResponse>> getSetOfCctvResponse() {
         responseSet.clear();
-        getDataForResponse(getListOfCctvTemp());
+        getDataForResponse(getListOfCctvRequests());
         return ResponseEntity.status(HttpStatus.CREATED).body(responseSet);
     }
 
@@ -42,7 +42,7 @@ public class MainController {
      * @return CctvRequest
      * @see CctvRequest
      */
-    public List<CctvRequest> getListOfCctvTemp() {
+    public List<CctvRequest> getListOfCctvRequests() {
         return client
                 .get()
                 .uri("/5c51b9dd3400003252129fb5")

@@ -37,7 +37,7 @@ class MainControllerTest {
 
     @Test
     void getListOfCctvTempReturnsList() {
-        List<CctvRequest> listOfCctvTemp = mainController.getListOfCctvTemp();
+        List<CctvRequest> listOfCctvTemp = mainController.getListOfCctvRequests();
         Assert.notEmpty(listOfCctvTemp, "Пустой результат в listOfCctvTemp()");
     }
 
